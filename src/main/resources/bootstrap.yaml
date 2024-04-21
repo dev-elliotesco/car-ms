@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: car-ms
+    cloud:
+        config:
+          enabled: true
+          uri: http://localhost:8081
+
+# Configuración de PostgreSQL
+    datasource:
+      url: jdbc:postgresql://${POSTGRES_HOST:database-host}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE:database-name}
+      username: ${POSTGRES_USER:myusername}
+      password: ${POSTGRES_PASSWORD:mypassword}
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        ddl-auto: update
+
+# Configuración de Swagger
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /api-docs
