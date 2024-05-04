@@ -8,9 +8,9 @@ spring:
 
 # Configuración de PostgreSQL
     datasource:
-      url: jdbc:postgresql://${POSTGRES_HOST:database-host}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE:database-name}
-      username: ${POSTGRES_USER:myusername}
-      password: ${POSTGRES_PASSWORD:mypassword}
+      url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}
+      username: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       hibernate:
